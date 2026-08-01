@@ -41,23 +41,6 @@ def receive():
 font_win = font.Font(None, 72)
 font_main = font.Font(None, 36)
 # --- ЗОБРАЖЕННЯ ----
-loading_bg = image.load("Images-papka/loading.png")
-loading_bg = transform.scale(loading_bg, (WIDTH, HEIGHT))
-
-start_game = image.load("Images-papka/start-game.png")
-start_game = transform.scale(start_game, (WIDTH, HEIGHT))
-
-game_bg =  = image.load("images-papka/myachik.png")
-game_bg = transform.scale(game_bg, (WIDTH, HEIGHT))
-
-win_bg = image.load("Images-papka/you-are-winner.png")
-win_bg = transform.scale(win_bg, (WIDTH, HEIGHT))
-
-lose_bg = imgage.load("Images-papka/you-lose-game.png")
-lose_bg = transform.scale(lose_bg, (WIDTH, HEIGHT))
-
-ball_skin = imgage.load("Images-papka/myachik.png")
-ball_skin = transform.scale(ball_skin, (WIDTH, HEIGHT))
 
 # --- ЗВУКИ ---
 
@@ -95,6 +78,7 @@ while True:
 
         win_text = font_win.render(text, True, (255, 215, 0))
         text_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+
         screen.blit(win_text, text_rect)
 
         text = font_win.render('К - рестарт', True, (255, 215, 0))
